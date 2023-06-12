@@ -9,7 +9,8 @@ jobs:
   security:
     uses: guardian/.github/.github/workflows/sbt-node-snyk-pr.yml@main
     with:
-      ORG: ~
-      SEVERITY_THRESHOLD: critical
+      ORG: guardian-devtools
+      SKIP_NODE: true
+      DEBUG: true
     secrets:
       SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
